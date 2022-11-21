@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.11.0-41-generic-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-11-20T17:48:38.360124",
+    "startedAt": "2022-11-20T17:48:37.350130",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/aftab/aftab/sepsis_226153/formatSAGE.py",
+    "codePath": "formatSAGE.py",
+    "git": {
+        "remote": "https://github.com/Aftab571/sepsis_226153.git",
+        "commit": "4a0548b5f39c31e7b7cc71822c3c5cc93fc4b6c0"
+    },
+    "email": "mohd.aftab571@gmail.com",
+    "root": "/home/aftab/aftab/sepsis_226153",
+    "host": "cip145-34",
+    "username": "aftab",
+    "executable": "/home/aftab/aftab/my-project-env/bin/python"
+}

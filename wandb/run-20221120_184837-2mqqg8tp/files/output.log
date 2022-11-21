@@ -1,0 +1,31 @@
+GAT(
+  (conv1): GATConv((-1, -1), 2, heads=1)
+)
+Traceback (most recent call last):
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 497, in <module>
+    main()
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 406, in main
+    loss,out,w = train(model,optimizer,criterion,data,loader,device)
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 222, in train
+    loss = criterion(out['Admission'][:batch_size],
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 1164, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/functional.py", line 3014, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: size mismatch (got input: [2], target: [7])
+Traceback (most recent call last):
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 497, in <module>
+    main()
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 406, in main
+    loss,out,w = train(model,optimizer,criterion,data,loader,device)
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 222, in train
+    loss = criterion(out['Admission'][:batch_size],
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 1164, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/functional.py", line 3014, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: size mismatch (got input: [2], target: [7])

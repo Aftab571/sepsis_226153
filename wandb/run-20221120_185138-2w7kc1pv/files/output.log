@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 497, in <module>
+    main()
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 410, in main
+    train_acc,pred_train = test(model,optimizer,criterion,data['Admission'].train_mask,data,device)
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 238, in test
+    pred = out['Admission'].argmax(dim=1)  # Use the class with highest probability.
+TypeError: tuple indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 497, in <module>
+    main()
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 410, in main
+    train_acc,pred_train = test(model,optimizer,criterion,data['Admission'].train_mask,data,device)
+  File "/home/aftab/aftab/sepsis_226153/formatSAGE.py", line 238, in test
+    pred = out['Admission'].argmax(dim=1)  # Use the class with highest probability.
+TypeError: tuple indices must be integers or slices, not str
+GAT(
+  (conv1): GATConv((-1, -1), 2, heads=1)
+)

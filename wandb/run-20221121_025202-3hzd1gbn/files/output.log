@@ -1,0 +1,88 @@
+GAT(
+  (conv1): GATConv((-1, -1), 2, heads=1)
+)
+/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/nn/conv/gat_conv.py:282: UserWarning: FALLBACK path has been taken inside: runCudaFusionGroup. This is an indication that codegen Failed for some reason.
+To debug try disable codegen fallback path via setting the env variable `export PYTORCH_NVFUSER_DISABLE=fallback`
+ (Triggered internally at  ../torch/csrc/jit/codegen/cuda/manager.cpp:334.)
+  alpha = softmax(alpha, index, ptr, size_i)
+Traceback (most recent call last):
+  File "formatSAGE.py", line 499, in <module>
+    main()
+  File "formatSAGE.py", line 410, in main
+    train_acc,pred_train = test(model,optimizer,criterion,data['Admission'].train_mask,data,device)
+  File "formatSAGE.py", line 237, in test
+    out = model(data.x_dict, data.edge_index_dict, data.edge_attr_dict)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/fx/graph_module.py", line 652, in call_wrapped
+    return self._wrapped_call(self, *args, **kwargs)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/fx/graph_module.py", line 277, in __call__
+    raise e
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/fx/graph_module.py", line 267, in __call__
+    return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "<eval_with_key>.1", line 11, in forward
+    conv1__Labs = self.conv1.Admission__has_labs__Labs((x__Admission, x__Labs), edge_index__Admission__has_labs__Labs, edge_attr__Admission__has_labs__Labs);  edge_index__Admission__has_labs__Labs = edge_attr__Admission__has_labs__Labs = None
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/nn/conv/gat_conv.py", line 242, in forward
+    out = self.propagate(edge_index, x=x, alpha=alpha, edge_attr=edge_attr,
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/nn/conv/message_passing.py", line 317, in propagate
+    out = self.message(**msg_kwargs)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/nn/conv/gat_conv.py", line 282, in message
+    alpha = softmax(alpha, index, ptr, size_i)
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/utils/softmax.py", line 43, in fallback_cuda_fuser
+        src_max = scatter(src, index, dim, dim_size=N, reduce='max')
+        src_max = src_max.index_select(dim, index)
+        out = (src - src_max).exp()
+               ~~~~~~~~~~~~~ <--- HERE
+        out_sum = scatter(out, index, dim, dim_size=N, reduce='sum')
+        out_sum = out_sum.index_select(dim, index)
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Traceback (most recent call last):
+  File "formatSAGE.py", line 499, in <module>
+    main()
+  File "formatSAGE.py", line 410, in main
+    train_acc,pred_train = test(model,optimizer,criterion,data['Admission'].train_mask,data,device)
+  File "formatSAGE.py", line 237, in test
+    out = model(data.x_dict, data.edge_index_dict, data.edge_attr_dict)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/fx/graph_module.py", line 652, in call_wrapped
+    return self._wrapped_call(self, *args, **kwargs)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/fx/graph_module.py", line 277, in __call__
+    raise e
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/fx/graph_module.py", line 267, in __call__
+    return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "<eval_with_key>.1", line 11, in forward
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/nn/conv/gat_conv.py", line 242, in forward
+    out = self.propagate(edge_index, x=x, alpha=alpha, edge_attr=edge_attr,
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/nn/conv/message_passing.py", line 317, in propagate
+    out = self.message(**msg_kwargs)
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/nn/conv/gat_conv.py", line 282, in message
+    alpha = softmax(alpha, index, ptr, size_i)
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+  File "/home/aftab/aftab/my-project-env/lib/python3.8/site-packages/torch_geometric/utils/softmax.py", line 43, in fallback_cuda_fuser
+        src_max = scatter(src, index, dim, dim_size=N, reduce='max')
+        src_max = src_max.index_select(dim, index)
+        out = (src - src_max).exp()
+               ~~~~~~~~~~~~~ <--- HERE
+        out_sum = scatter(out, index, dim, dim_size=N, reduce='sum')
+        out_sum = out_sum.index_select(dim, index)
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.

@@ -1,0 +1,117 @@
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_setup.py:_flush():76] Configure stats pid to 8891
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_setup.py:_flush():76] Loading settings from /home/aftab/.config/wandb/settings
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_setup.py:_flush():76] Loading settings from /home/aftab/aftab/sepsis_226153/wandb/settings
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'formatSAGE.py', 'program': 'formatSAGE.py'}
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_init.py:_log_setup():461] Logging user logs to /home/aftab/aftab/sepsis_226153/wandb/run-20221120_221649-f8i02aj4/logs/debug.log
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_init.py:_log_setup():462] Logging internal logs to /home/aftab/aftab/sepsis_226153/wandb/run-20221120_221649-f8i02aj4/logs/debug-internal.log
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_init.py:init():495] calling init triggers
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {}
+2022-11-20 22:16:49,760 INFO    MainThread:8891 [wandb_init.py:init():543] wandb.init() called when a run is still active
+2022-11-20 22:16:56,676 INFO    MainThread:8891 [wandb_run.py:_atexit_cleanup():1862] got exitcode: 0
+2022-11-20 22:16:56,677 INFO    MainThread:8891 [wandb_run.py:_restore():1834] restore
+2022-11-20 22:16:59,525 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 757
+  total_bytes: 757
+}
+
+2022-11-20 22:16:59,725 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 757
+  total_bytes: 757
+}
+
+2022-11-20 22:17:00,231 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 757
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:00,332 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 757
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:00,433 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 30017
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:00,534 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 32492
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:00,635 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 32492
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:00,739 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 32492
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:00,842 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 32492
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:00,946 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 32492
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:01,463 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 32492
+  total_bytes: 32492
+}
+
+2022-11-20 22:17:01,906 INFO    MainThread:8891 [wandb_run.py:_on_finish():1991] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 32492
+  total_bytes: 32492
+}
+local_info {
+}
+
+2022-11-20 22:17:03,017 INFO    MainThread:8891 [wandb_run.py:_footer_history_summary_info():3099] rendering history
+2022-11-20 22:17:03,018 INFO    MainThread:8891 [wandb_run.py:_footer_history_summary_info():3131] rendering summary
+2022-11-20 22:17:03,020 INFO    MainThread:8891 [wandb_run.py:_footer_sync_info():3055] logging synced files
